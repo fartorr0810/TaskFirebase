@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'modal',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   },
+  {
+    path: 'listarcoche',
+    loadChildren: () => import('./listarcoche/listarcoche.module').then( m => m.ListarcochePageModule)
+  },
 ];
 
 @NgModule({

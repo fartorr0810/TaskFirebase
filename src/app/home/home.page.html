@@ -1,25 +1,48 @@
-<ion-header>
-    <ion-toolbar color="primary">
+<ion-header [translucent]="true">
+    <ion-toolbar>
         <ion-title>
-            Devdactic Notes
+            FranCarDOTCOM
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-    <ion-list>
-        <ion-item *ngFor="let note of notes" (click)="openNote(note)">
-            <ion-label>
-                {{ note.title }}
-            </ion-label>
-        </ion-item>
-    </ion-list>
-
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="addNote()">
-            <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
-
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+    </ion-header>
+    <ion-card>
+        <ion-card-header>
+            Listar Coches
+        </ion-card-header>
+        <ion-card-content>
+            <p>
+                Vea todos los coches del concesionario
+                <button ion-button icon-left>
+                  <ion-icon name="car-sport-outline"></ion-icon>
+            <a routerLink="/listarcoche">Listar coches</a>
+        </button>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Informacion sobre el autor
+        </ion-card-header>
+        <ion-card-content>
+            <p>Aplicacion desarrollada por Javier Gallego</p>
+            <button ion-button icon-left>
+        <ion-icon name="person" style="zoom: 2.0;"></ion-icon>
+        <a routerLink="/autor">  Consultar informacion</a>
+      </button>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Libros favoritos
+        </ion-card-header>
+        <ion-card-content>
+            <button ion-button icon-left>
+      <ion-icon name="book" style="zoom: 2.0;"></ion-icon>
+      <a routerLink="/favoritos">Mostrar Libros</a>
+    </button>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
